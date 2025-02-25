@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Tag, tags } from "./constants/tags"
 import { motion } from "motion/react"
+import { Credits } from "./components/credits"
 
 function App() {
   const [selectedTags, setSelectedTags] = useState<Tag[]>([tags[0]])
@@ -9,6 +10,7 @@ function App() {
 
   return (
     <section className="w-full h-dvh flex flex-col items-center justify-center gap-4">
+      <Credits />
       <motion.div 
         layout
         className="min-w-80 h-12 flex items-center px-2 gap-2"
